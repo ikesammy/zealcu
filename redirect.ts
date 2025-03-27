@@ -1,5 +1,5 @@
 // redirect.ts
 export default function handler(req: Request): Response {
-  // Redirect any request to the specified target URL
-  return Response.redirect('https://google.com', 301);
+  // Perform the redirect to your target URL
+  return Response.redirect('https://your-target-url.com', 301);
 }
