@@ -1,5 +1,7 @@
 // redirect.ts
-export default function handler(req: Request): Response {
-  // Perform the redirect to your target URL
-  return Response.redirect('https://example.com', 301);
-}
+import { serve } from "https://deno.land/std/http/server.ts";
+
+const redirectUrl = "https://example.com"; // URL you want to redirect to
+
+// Handle requests and redirect to the specified URL
+serve(() => new Response(null, { status: 302, headers: { "Location": redirectUrl } }));
